@@ -71,12 +71,36 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // Sort companies by start year
 
-const sortedCompanies = companies.sort((a, b) => a.start - b.start);
+// const sortedCompanies = companies.sort((a, b) => a.start - b.start);
 
-console.log(sortedCompanies);
+// console.log(sortedCompanies);
 
 // Sort ages
 
-const sortedAges = ages.sort((a, b) => a - b);
+// const sortedAges = ages.sort((a, b) => a - b);
 
-console.log(sortedAges);
+// console.log(sortedAges);
+
+// reduce
+
+// let ageSum = 0;
+
+// for (let i = 0; i < ages.length; i++) {
+//   ageSum += ages[i];
+// }
+
+// console.log(ageSum);
+
+// Sum age values
+
+const ageSum = ages.reduce((acc, curr) => acc + curr, 0);
+
+console.log(ageSum); // 460
+
+// Get total years from all companies
+
+const totalYears = companies.reduce((total, company) => {
+  return total + (company.end - company.start);
+}, 0);
+
+console.log(totalYears); // 119
