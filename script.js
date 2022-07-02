@@ -57,12 +57,26 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // Create array of company names
 
-const companyNames = companies.map((company) => company.name);
+// const companyNames = companies.map((company) => company.name);
 
-console.log(companyNames);
+// console.log(companyNames);
 
 // Create array of company names with its start year and end year
 
-const companyInfo = companies.map((company) => `${company.name} [${company.start} - ${company.end}]`);
+// const companyInfo = companies.map((company) => `${company.name} [${company.start} - ${company.end}]`);
 
-console.log(companyInfo);
+// console.log(companyInfo);
+
+// sort
+
+// Sort companies by start year
+
+const sortedCompanies = companies.sort((a, b) => a.start - b.start);
+
+console.log(sortedCompanies);
+
+// Sort ages
+
+const sortedAges = ages.sort((a, b) => a - b);
+
+console.log(sortedAges);
