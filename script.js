@@ -37,18 +37,32 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // Filter each element of the arr that is greater or equal than 21
 
-const canDrink = ages.filter((age) => age >= 21);
+// const canDrink = ages.filter((age) => age >= 21);
 
-console.log(canDrink);
+// console.log(canDrink);
 
 // Filter retail companies
 
-const retailCompanies = companies.filter((company) => company.category === 'Retail');
+// const retailCompanies = companies.filter((company) => company.category === 'Retail');
 
-console.log(retailCompanies);
+// console.log(retailCompanies);
 
 // Filter 80s companies
 
-const eightiesCompanies = companies.filter((company) => company.start >= 1980 && company.start < 1990);
+// const eightiesCompanies = companies.filter((company) => company.start >= 1980 && company.start < 1990);
 
-console.log(eightiesCompanies);
+// console.log(eightiesCompanies);
+
+// map
+
+// Create array of company names
+
+const companyNames = companies.map((company) => company.name);
+
+console.log(companyNames);
+
+// Create array of company names with its start year and end year
+
+const companyInfo = companies.map((company) => `${company.name} [${company.start} - ${company.end}]`);
+
+console.log(companyInfo);
