@@ -18,6 +18,37 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 //   console.log(companies[i]);
 // }
 
-companies.forEach((company) => {
-  console.log(company);
-});
+// For each array element console.log it
+// companies.forEach((company) => {
+//   console.log(company);
+// });
+
+// filter
+
+// let canDrink = [];
+
+// for (let i = 0; i < ages.length; i++) {
+//   if (ages[i] >= 21) {
+//     canDrink.push(ages[i]);
+//   }
+// }
+
+// console.log(canDrink);
+
+// Filter each element of the arr that is greater or equal than 21
+
+const canDrink = ages.filter((age) => age >= 21);
+
+console.log(canDrink);
+
+// Filter retail companies
+
+const retailCompanies = companies.filter((company) => company.category === 'Retail');
+
+console.log(retailCompanies);
+
+// Filter 80s companies
+
+const eightiesCompanies = companies.filter((company) => company.start >= 1980 && company.start < 1990);
+
+console.log(eightiesCompanies);
